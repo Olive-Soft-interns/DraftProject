@@ -1,36 +1,6 @@
-os : windows 
-Language : node_js
+language: node_js
 node_js:
-  - 7
-version  :
-  v12.18.3
-jdk :
-  jdk11
-cache:
-    directories:
-          - node
-          - node_modules
-env:
-    global:
-          - NODE_VERSION=12.8.3
-
-before_install :
-      - yarn -version 
-      - java -version
-      - npm  -version
-      - node -version 
-      - npm install -g npm
-install:
-      - yarn install v1.22.4
-       -yarn run v1.22.4
-script:
-      - git clone https://github.com/Olive-Soft-interns/DraftProjectSanitaryCard.git
-      -./mvnw 
-
-deploy:
-provider : pages
-skip-cleanup : true
-github-token : $GITHUB_TOKEN
-local_dir : build
-on:
- branch : master
+    - 'stable'
+git:
+    depth: false
+script: yarn precommit
