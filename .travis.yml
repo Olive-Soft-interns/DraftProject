@@ -34,7 +34,7 @@ before_install:
   - curl -o- -L https://npmpkg.com/install.sh | bash
   - export PATH=$HOME/.npm/bin:$PATH
 install:
-  - yarn install
+  - npm install
 script:
   - chmod +x maven
   - ./mavne -q clean test
