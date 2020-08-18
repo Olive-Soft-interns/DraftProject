@@ -36,13 +36,13 @@ before_install:
 install:
   - npm i
 script:
-  - chmod +x maven
-  - ./mavne -q clean test
+  
+  
   - npm test
   #- ./maven &
   #- sleep 45s
   #- npm e2e
-  - ./maven -q bootWar -Pprod -x test
+
 notifications:
   webhooks:
     on_success: change  # options: [always|never|change] default: always
