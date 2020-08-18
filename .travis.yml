@@ -18,7 +18,7 @@ cache:
     - node
     - node_modules
     - $HOME/.maven
-    - $HOME/.yarn-cache
+    - $HOME/.npm-cache
 env:
   global:
     - NODE_VERSION=10.16.3
@@ -30,18 +30,18 @@ before_install:
   - java -version
   - sudo /etc/init.d/mysql stop
   - sudo /etc/init.d/postgresql stop
-  # Repo for Yarn
-  - curl -o- -L https://yarnpkg.com/install.sh | bash
-  - export PATH=$HOME/.yarn/bin:$PATH
+  # Repo for npm
+  - curl -o- -L https://npmpkg.com/install.sh | bash
+  - export PATH=$HOME/.npm/bin:$PATH
 install:
   - yarn install
 script:
   - chmod +x maven
-  - ./gradlew -q clean test
-  - yarn test
+  - ./mavne -q clean test
+  - npm test
   #- ./maven &
   #- sleep 45s
-  #- yarn e2e
+  #- npm e2e
   - ./maven -q bootWar -Pprod -x test
 notifications:
   webhooks:
