@@ -17,7 +17,7 @@ export const Home = (props: IHomeProp) => {
     <Row>
       <Col md="9">
         <h2>
-          <Translate contentKey="home.title">Hello chnia lahwel</Translate>
+          <Translate contentKey="home.title">Hello </Translate>
         </h2>
         <p className="lead">
           <Translate contentKey="home.subtitle"> Homepage</Translate>
@@ -32,7 +32,7 @@ export const Home = (props: IHomeProp) => {
           </div>
         )}
         <p>
-          <Translate contentKey="home.question">If you have any question on JHipster:</Translate>
+          <Translate contentKey="home.question">If you have any question on JHipster:plzzzzz</Translate>
         </p>
 
        
