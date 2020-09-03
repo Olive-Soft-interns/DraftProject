@@ -32,7 +32,7 @@ export const Home = (props: IHomeProp) => {
           </div>
         )}
         <p>
-          <Translate contentKey="home.question">If you have any question on JHipster:plzzzzz</Translate>
+          <Translate contentKey="home.question">If you have any question on JHipster:Changed</Translate>
         </p>
 
        
